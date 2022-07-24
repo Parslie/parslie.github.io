@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.75eb3d4e.css",
-    "main.js": "/static/js/main.8b65bbc3.js",
+    "main.css": "/static/css/main.aa836ecf.css",
+    "main.js": "/static/js/main.56775c47.js",
     "static/js/787.abc3ec12.chunk.js": "/static/js/787.abc3ec12.chunk.js",
     "static/media/linja-pona-4.2.otf": "/static/media/linja-pona-4.2.4d08d94c9cddf5638f76.otf",
     "static/media/linjasuwi.otf": "/static/media/linjasuwi.792393c691ca1535257b.otf",
     "index.html": "/index.html",
-    "main.75eb3d4e.css.map": "/static/css/main.75eb3d4e.css.map",
-    "main.8b65bbc3.js.map": "/static/js/main.8b65bbc3.js.map",
+    "main.aa836ecf.css.map": "/static/css/main.aa836ecf.css.map",
+    "main.56775c47.js.map": "/static/js/main.56775c47.js.map",
     "787.abc3ec12.chunk.js.map": "/static/js/787.abc3ec12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75eb3d4e.css",
-    "static/js/main.8b65bbc3.js"
+    "static/css/main.aa836ecf.css",
+    "static/js/main.56775c47.js"
   ]
 }
