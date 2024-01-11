@@ -1,121 +1,100 @@
 <script>
-
+    import logo from '$lib/logo.jpg';
 </script>
 
-<div class="app">
-    <!-- <header>
-
+<div class="layout">
+    <header>
     </header>
 
     <aside>
-
+        <div class="aside-content">
+            <img class="logo" src={logo} alt="logo" />
+            <h1 class="title">Viktor Holta</h1>
+            <p>A short description of me.</p>
+        </div>
     </aside>
 
     <main>
+        <nav>
+            <!-- TODO: create nav buttons -->
+        </nav>
 
-    </main> -->
-    <div class="layout">
-        <header>
-            <h1>Viktor Holta</h1>
-            <div class="corner"></div>
-        </header>
-
-        <aside>
-            <div class="wrapper">
-                <!-- TODO: <slot name="aside" />  -->
-                <p>Aside content goes here!</p>
-            </div>
-            <div class="corner"></div>
-        </aside>
-
-        <main>
-            <slot />
-        </main>
-    </div>
+        <slot />
+    </main>
 </div>
 
 <style lang="scss">
-    $radius: 1.5rem;
-    $padding: 1rem;
-
-    p {
-        margin: 0;
-    }
-    
-    h1 {
-        margin: 0;
-        line-height: 1;
-    }
-    
-    .app {
-        width: 100svw;
-        min-height: 100svh;
-        background-color: $background;
-    }
+    $header-height: 2.5rem;
+    $aside-width: 25.5rem;
+    $border-radius: 1rem;
+    $page-margin: max($border-radius, $header-height);
 
     .layout {
-        display: grid;
-        grid-template-columns: 16rem 1fr;
-        grid-template-rows: max-content 1fr;
-
-        margin: 0 auto;
-        max-width: 60rem;
-
-        border-radius: $radius;
-        background: linear-gradient(190deg, $primary, $accent);
+        background-color: $background;
+        color: $text;
     }
 
     header {
-        grid-column: 1 / 3;
-        grid-row: 1;
-        position: relative;
-        overflow: hidden;
-
-        padding: $padding;
-        color: $background;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: $header-height;
+        background: $primary;
     }
 
     aside {
-        grid-column: 1;
-        grid-row: 2;
-        position: relative;
-        overflow: hidden;
+        position: fixed;
+        top: $header-height;
+        left: $page-margin;
+        bottom: $page-margin;
+        width: $aside-width;
+        border-radius: 0 0 $border-radius $border-radius;
+        background: $primary;
 
-        padding: $padding;
-        color: $background;
+        .aside-content {
+            position: absolute;
+            top: -$header-height;
+            bottom: 0;
+            padding: $header-height; // TODO: make based on nav button height
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -2 * $border-radius;
+            padding: $border-radius;
+            border-top-right-radius: $border-radius;
+            box-shadow: $border-radius (-$border-radius) 0 0 $primary;
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -2 * $border-radius;
+            padding: $border-radius;
+            border-top-left-radius: $border-radius;
+            box-shadow: -$border-radius (-$border-radius) 0 0 $primary;
+            z-index: -1;
+        }
     }
 
     main {
-        grid-column: 2;
-        grid-row: 2;
-
-        display: flex;
-        flex-direction: column;
-        gap: $padding;
-        
-        padding: $padding;
-
-        border-top-left-radius: $radius;
-        background: $background;
+        margin: $header-height $page-margin  $page-margin ($page-margin + $aside-width);
+        padding: $page-margin 0 0 $page-margin;
     }
 
-    .corner {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
-        padding: $radius;
-        width: 0;
-        height: 0;
-
-        border-bottom-right-radius: $radius;
-        background: transparent;
-        box-shadow: $radius $radius 0 0 $background;
+    .logo {
+        max-width: 100%;
+        border-radius: 50%;
     }
 
-    .wrapper {
-        position: sticky;
-        top: 0;
-        width: 100%;
+    .title {
+        margin: 0;
+        line-height: 1;
+        text-align: center;
     }
 </style>

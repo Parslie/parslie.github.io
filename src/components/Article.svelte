@@ -1,37 +1,11 @@
-<div class="wrapper">
-    <article>
-        <h2>
-            article
-        </h2>
-        <p>
-            bottom text
-        </p>
-    </article>
-</div>
+<article>
+    <h2>Top text</h2>
+    <p>Bottom text</p>
+</article>
 
 <style lang="scss">
-    $radius: 0.75rem;
-    $border-width: 3px;
-    
-    p {
-        margin: 0;
-    }
-
-    h2 {
-        margin: 0;
-        line-height: 1;
-    }
-
-    .wrapper {
-        padding: $border-width;
-        border-radius: $radius;
-        background: linear-gradient(190deg, $primary, $accent);
-    }
-
     article {
-        padding: 1rem;
-        
-        border-radius: calc($radius - $border-width);
-        background: $background;
+        :first-child { margin-top: 0; }
+        :last-child { margin-bottom: 0; }
     }
 </style>
