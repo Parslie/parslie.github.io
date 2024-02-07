@@ -10,7 +10,7 @@
         <div class="aside-content">
             <img class="logo" src={logo} alt="logo" />
             <h1 class="title">Viktor Holta</h1>
-            <p>A short description of me.</p>
+            <p>TODO: A short description of me.</p>
         </div>
     </aside>
 

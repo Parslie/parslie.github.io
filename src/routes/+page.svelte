@@ -2,98 +2,14 @@
     import Article from "../components/Article.svelte";
 </script>
 
-<Article>
-    
+<Article title="About me">
+    <p>TODO: A long description of myself.</p>
 </Article>
 
-<Article>
-    
+<Article title="Work experience">
+    <p>TODO: write</p>
 </Article>
 
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
-</Article>
-
-<Article>
-    
+<Article title="Education">
+    <p>TODO: write</p>
 </Article>
