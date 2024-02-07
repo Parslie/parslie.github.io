@@ -9,12 +9,8 @@
 
 <style lang="scss">
     article {
-        :first-child { margin-top: 0; }
-        :last-child { margin-bottom: 0; }
-
-        border: $small solid $primary;
-        border-radius: $large;
-        padding: $large;
-        box-sizing: border-box;
+        border: 0.25rem solid $primary;
+        border-radius: $article-radius;
+        padding: 1rem;
     }
 </style>

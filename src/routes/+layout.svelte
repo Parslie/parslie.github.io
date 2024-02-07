@@ -4,33 +4,22 @@
 
 <div class="layout">
     <header>
-    </header>
-
-    <aside>
-        <div class="aside-content">
+        <aside>
             <img class="logo" src={logo} alt="logo" />
             <h1 class="title">Viktor Holta</h1>
             <p>TODO: A short description of me.</p>
-        </div>
-    </aside>
+        </aside>
+    </header>
 
     <main>
-        <nav>
-            <!-- TODO: create nav buttons -->
-        </nav>
-
         <slot />
     </main>
 </div>
 
 <style lang="scss">
-    $header-height: 2.5rem;
-    $aside-width: 25.5rem;
-    $border-radius: 1rem;
-    $page-margin: max($border-radius, $header-height);
+    $aside-width: 23rem;
 
     .layout {
-        background-color: $background;
         color: $text;
     }
 
@@ -38,63 +27,48 @@
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        height: $header-height;
-        background: $primary;
-    }
+        width: 100%;
+        border-top: $layout-border solid $primary;
 
-    aside {
-        position: fixed;
-        top: $header-height;
-        left: $page-margin;
-        bottom: $page-margin;
-        width: $aside-width;
-        border-radius: 0 0 $border-radius $border-radius;
-        background: $primary;
-
-        .aside-content {
-            position: absolute;
-            top: -$header-height;
-            bottom: 0;
-            padding: $header-height; // TODO: make based on nav button height
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
+        aside {
+            position: relative;
             top: 0;
-            left: -2 * $border-radius;
-            padding: $border-radius;
-            border-top-right-radius: $border-radius;
-            box-shadow: $border-radius (-$border-radius) 0 0 $primary;
-            z-index: -1;
-        }
+            left: $layout-padding;
+            width: $aside-width;
+            max-height: calc(100vh - $layout-padding - $layout-border);
+            padding: 0 1rem 1rem;
+            background-color: $primary;
+            border-radius: 0 0 $layout-radius $layout-radius;
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: -2 * $border-radius;
-            padding: $border-radius;
-            border-top-left-radius: $border-radius;
-            box-shadow: -$border-radius (-$border-radius) 0 0 $primary;
-            z-index: -1;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                padding: $layout-radius;
+                background-color: transparent;
+                box-shadow: 0 (-$layout-radius) 0 0 $primary;
+            }
+
+            &::before {
+                left: -2 * $layout-radius;
+                border-top-right-radius: $layout-radius;
+            }
+
+            &::after {
+                right: -2 * $layout-radius;
+                border-top-left-radius: $layout-radius;
+            }
         }
     }
 
     main {
-        margin: $header-height $page-margin  $page-margin ($page-margin + $aside-width);
-        padding: $page-margin 0 0 $page-margin;
+        display: flex;
+        flex-direction: column;
+        gap: $layout-padding;
+        margin: ($layout-padding + $layout-border) $layout-padding $layout-padding ($aside-width + $layout-padding * 2);
     }
 
     .logo {
         max-width: 100%;
-        border-radius: 50%;
-    }
-
-    .title {
-        margin: 0;
-        line-height: 1;
-        text-align: center;
     }
 </style>

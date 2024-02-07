@@ -8,6 +8,7 @@ export default defineConfig({
 			scss: {
 				additionalData: `
 					@import '$lib/variables';
+					@import '$lib/global';
 				`
 			}
 		}
