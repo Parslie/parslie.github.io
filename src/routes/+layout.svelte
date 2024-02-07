@@ -8,9 +8,13 @@
             <img class="logo" src={logo} alt="logo" />
             <h1 class="title">Viktor Holta</h1>
             <p>TODO: A short description of me.</p>
+
+            <nav>
+
+            </nav>
         </aside>
     </header>
-
+    
     <main>
         <slot />
     </main>
@@ -65,6 +69,7 @@
         display: flex;
         flex-direction: column;
         gap: $layout-padding;
+        position: relative; // Needed to make content interactable
         margin: ($layout-padding + $layout-border) $layout-padding $layout-padding ($aside-width + $layout-padding * 2);
     }
 
