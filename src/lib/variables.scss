@@ -10,3 +10,4 @@ $layout-radius: 2rem;
 $article-radius: $layout-radius - $layout-padding;
 $aside-padding: 1rem;
 $nav-button-radius: $layout-radius - $aside-padding;
+$content-radius: $article-radius * 0.5;

@@ -13,4 +13,9 @@
         border-radius: $article-radius;
         padding: 1rem;
     }
+
+    h2 {
+        line-height: 1;
+        margin-bottom: 0.25em;
+    }
 </style>
