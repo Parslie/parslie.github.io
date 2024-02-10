@@ -7,10 +7,11 @@
         <aside>
             <img class="logo" src={logo} alt="logo" />
             <h1 class="title">Viktor Holta</h1>
-            <p>TODO: A short description of me.</p>
 
             <nav>
-
+                <a href="/">Home</a>
+                <a href="/programming">Programming</a>
+                <a href="/modeling">3D modeling</a>
             </nav>
         </aside>
     </header>
@@ -24,6 +25,11 @@
     $aside-width: 23rem;
 
     .layout {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: $background;
         color: $text;
     }
 
@@ -40,7 +46,7 @@
             left: $layout-padding;
             width: $aside-width;
             max-height: calc(100vh - $layout-padding - $layout-border);
-            padding: 0 1rem 1rem;
+            padding: 0 $aside-padding $aside-padding;
             background-color: $primary;
             border-radius: 0 0 $layout-radius $layout-radius;
 
@@ -65,6 +71,27 @@
         }
     }
 
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+
+        a {
+            border: 0.125rem solid $background;
+            border-radius: $nav-button-radius;
+            text-align: center;
+            color: $text;
+            background-color: darken($primary, 12%);
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                background-color: darken($primary, 18%);
+            }
+        }
+    }
+
     main {
         display: flex;
         flex-direction: column;
@@ -72,8 +99,12 @@
         position: relative; // Needed to make content interactable
         margin: ($layout-padding + $layout-border) $layout-padding $layout-padding ($aside-width + $layout-padding * 2);
     }
-
+    
     .logo {
         max-width: 100%;
+    }
+
+    .title {
+        text-align: center;
     }
 </style>

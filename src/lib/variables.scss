@@ -1,10 +1,12 @@
-$text: #231306;
-$background: #fffbf7;
-$primary: #e8a469;
-$secondary: #f7dfca;
-$accent: #d47421;
+$text: #04240c;
+$background: #f2fef6;
+$primary: #2fe766;
+$secondary: #7bb8f0;
+$accent: #4d62ea;
 
 $layout-border: 1.5rem;
 $layout-padding: 1rem;
 $layout-radius: 2rem;
 $article-radius: $layout-radius - $layout-padding;
+$aside-padding: 1rem;
+$nav-button-radius: $layout-radius - $aside-padding;
