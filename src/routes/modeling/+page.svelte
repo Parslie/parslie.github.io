@@ -10,18 +10,26 @@
     </p>
 </Article>
 
-<Article title="Kallax 4x4">
-    <img src={kallax} alt="kallax 4 by 4 bookshelf" />
-</Article>
-
-<Article title="Malm">
-    <img src={malm} alt="malm drawer" />
-</Article>
+<div class="model-grid">
+    <Article title="Kallax 4x4">
+        <img src={kallax} alt="kallax 4 by 4 bookshelf" />
+    </Article>
+    
+    <Article title="Malm">
+        <img src={malm} alt="malm drawer" />
+    </Article>
+</div>
 
 <style lang="scss">
     img {
         display: block;
         max-width: 100%;
         border-radius: $content-radius;
+    }
+
+    .model-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: $layout-padding;
     }
 </style>
