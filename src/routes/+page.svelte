@@ -6,7 +6,7 @@
         ["June 2023 - July 2023", "Cashier", "Kullbergs Jordgubbshandel"],
     ];
     const education = [
-        ["August 2019 - ", "Master of Science in Computer Science and Software Engineering", "Linköping University"],
+        ["August 2019 - Now", "Master of Science in Computer Science and Software Engineering", "Linköping University"],
         ["August 2016 - June 2019", "Game Development", "Ljud- & Bildskolan (Audio and Visual School)"],
     ];
 </script>

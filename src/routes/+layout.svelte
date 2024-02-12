@@ -102,6 +102,7 @@
     
     .logo {
         max-width: 100%;
+        border-radius: $nav-button-radius;
     }
 
     .title {
