@@ -12,7 +12,10 @@
 </script>
 
 <Article title="About me">
-    <p>TODO: A long description of myself.</p>
+    <p>
+        My name is Viktor Holta and I'm a software engineering student at Linköping University in Sweden.
+        <!-- TODO: add more details -->
+    </p>
 </Article>
 
 <Article title="Work experience">
