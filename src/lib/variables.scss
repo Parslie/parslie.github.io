@@ -4,10 +4,12 @@ $primary: #2fe766;
 $secondary: #7bb8f0;
 $accent: #4d62ea;
 
-$layout-border: 1.5rem;
-$layout-padding: 1rem;
-$layout-radius: 2rem;
-$article-radius: $layout-radius - $layout-padding;
-$aside-padding: 1rem;
-$nav-button-radius: $layout-radius - $aside-padding;
+$sub-padding: 2rem;
+$sub-radius: 1rem;
+$sub-header-height: 1rem;
+$sub-aside-width: 22rem;
+$sub-aside-padding: $sub-header-height;
+
+// Old variables
+$article-radius: $sub-radius - $sub-padding;
 $content-radius: $article-radius * 0.5;

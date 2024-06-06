@@ -25,6 +25,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"sass": "^1.69.5"
+		"@fortawesome/free-brands-svg-icons": "^6.5.2",
+		"@fortawesome/free-solid-svg-icons": "^6.5.2",
+		"sass": "^1.69.5",
+		"svelte-fa": "^4.0.2"
 	}
 }
