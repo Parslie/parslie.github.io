@@ -1,6 +1,6 @@
 <script>
 	import Fa from 'svelte-fa';
-	import { faHome, faVial } from '@fortawesome/free-solid-svg-icons';
+	import { faHome, faVial, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 	import { page } from '$app/stores';
 	let currPath = $page.url.pathname;
@@ -22,6 +22,11 @@
 				<a href="/test" class={currPath == '/test' ? 'current' : undefined}>
 					<Fa icon={faVial} />
 					Test
+				</a>
+				<hr />
+				<a href="/recipes" class={currPath == '/recipes' ? 'current' : undefined}>
+					<Fa icon={faUtensils} />
+					Recipes
 				</a>
 			</nav>
 

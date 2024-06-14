@@ -10,6 +10,6 @@ $sub-header-height: 1rem;
 $sub-aside-width: 22rem;
 $sub-aside-padding: $sub-header-height;
 
-// Old variables
-$article-radius: $sub-radius - $sub-padding;
-$content-radius: $article-radius * 0.5;
+$article-radius: $sub-radius;
+$article-padding: 0.2rem;
+$article-inner-radius: $article-radius - $article-padding;
